@@ -6,27 +6,29 @@
 #    By: andefern <andefern@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/28 15:07:26 by andefern          #+#    #+#              #
-#    Updated: 2025/03/28 15:13:54 by andefern         ###   ########.fr        #
+#    Updated: 2025/04/03 13:38:34 by andefern         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Moar brainz!
-OBJ = $(SRCS:.cpp=.o)
-RM = rm -f
-CXX = c++
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+NAME = Moar_brainz
+
 SRCS =		main.cpp \
 			Zombie.cpp \
 			newZombie.cpp \
-			zombieHorde.cpp \
+			zombieHorde.cpp
+
+OBJ = $(SRCS:%.cpp=%.o)
+RM = rm -f
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 			
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CXX) $(CPPFLAGS) $(SRCS) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 
 %.o: %.cpp
-	$(CXX) $(CPPFLAGS) -c $< -o $@	
+	$(CXX) $(CXXFLAGS) -c $< -o $@	
 
 clean:
 

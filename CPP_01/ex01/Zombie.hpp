@@ -6,7 +6,7 @@
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/28 15:10:01 by andefern          #+#    #+#             */
-/*   Updated: 2025/03/28 15:11:58 by andefern         ###   ########.fr       */
+/*   Updated: 2025/04/03 13:40:18 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,24 @@
 # define ZOMBIE_HPP
 
 #include <iostream>
+#include <string>
 
 class Zombie {
 	
 	private:
 	
-		std::string pname;
+		std::string name;
 
 	public:
-		Zombie(std::string name);
-		~Zombie();
 
+	Zombie();
+	Zombie(std::string newname);
+	~Zombie();
+
+	void	setname(std::string name);
 	void	announce(void);
 };
 
-Zombie*	newZombie(std::string name);
-void randomChump(std::string name);
+Zombie* zombieHorde( int N, std::string name );
 
 #endif
