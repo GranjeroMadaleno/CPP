@@ -6,7 +6,7 @@
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 11:13:28 by andefern          #+#    #+#             */
-/*   Updated: 2025/04/06 11:33:21 by andefern         ###   ########.fr       */
+/*   Updated: 2025/04/06 11:43:06 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,30 +60,3 @@ void Harl::complain(std::string level)
 
 	std::cout << "I need a valid input." << std::endl;
 }
-
-/* void Harl::complain( std::string level )
-{
-	std::string signal[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-	int i = 0;
-	
-	while (i < 4 && signal[i] != level)
-		i++;
-	switch (i)
-	{
-		case 0:
-			debug();
-			break;
-		case 1:
-			info();
-			break;
-		case 2:
-			warning();
-			break;
-		case 3:
-			error();
-			break;
-		default:
-			std::cout << "I need a valid input." << std::endl;
-			break;
-	}
-} */
