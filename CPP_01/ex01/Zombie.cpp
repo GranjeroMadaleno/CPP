@@ -6,7 +6,7 @@
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/28 15:09:26 by andefern          #+#    #+#             */
-/*   Updated: 2025/04/03 13:49:04 by andefern         ###   ########.fr       */
+/*   Updated: 2025/04/06 13:04:18 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ Zombie::Zombie() {}
 
 Zombie::~Zombie()
 {
-	std::cout << name << "Me se muere el sonbi" << std::endl;
-	std::cout << "-----DEP Humpfrey-----" << std::endl;
+	std::cout << name << "Zombie decaying" << std::endl;
+	std::cout << "-----DEP Humphrey-----" << std::endl;
 }
 
 Zombie::Zombie(std::string newname)

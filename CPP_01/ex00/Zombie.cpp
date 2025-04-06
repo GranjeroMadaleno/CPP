@@ -6,7 +6,7 @@
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/28 12:36:46 by andefern          #+#    #+#             */
-/*   Updated: 2025/03/28 13:36:33 by andefern         ###   ########.fr       */
+/*   Updated: 2025/04/06 12:54:27 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 Zombie::Zombie(std::string name) {
 	pname = name;
-	std::cout << pname << " sa creao" << std::endl;
+	std::cout << pname << " Am i dead or still alive?" << std::endl;
 }
 
 Zombie::~Zombie() {
-	std::cout << pname << " las ha diñao" << std::endl;
+	std::cout << pname << " Looks like more dead than alive" << std::endl;
 }
 
 void	Zombie::announce(void)

@@ -6,7 +6,7 @@
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/28 13:09:57 by andefern          #+#    #+#             */
-/*   Updated: 2025/03/28 13:30:05 by andefern         ###   ########.fr       */
+/*   Updated: 2025/04/06 13:03:20 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,12 @@
 
 int	main(void)
 {
-	Zombie *sonbi;
+	Zombie *zombiE;
 	
-	sonbi = newZombie("Belisario");
+	zombiE = newZombie("Belisario");
+	zombiE->announce();
 	
 	randomChump("Dionisio");
 
-	delete sonbi;
+	delete zombiE;
 }
