@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/28 12:36:46 by andefern          #+#    #+#             */
-/*   Updated: 2025/04/10 14:05:17 by andefern         ###   ########.fr       */
+/*   Created: 2025/04/06 14:15:39 by andefern          #+#    #+#             */
+/*   Updated: 2025/04/06 14:24:21 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Fixed.hpp"
 
-Zombie::Zombie(std::string name) {
-	pname = name;
-	std::cout << pname << " Am i dead or still alive?" << std::endl;
-}
+#include <iostream>
 
-Zombie::~Zombie() {
-	std::cout << pname << " Looks like more dead than alive" << std::endl;
-}
-
-void	Zombie::announce(void)
+int main( void ) 
 {
-	std::cout << pname << ": BraiiiiiiinnnzzzZ..." << std::endl;
+    Fixed a;
+    Fixed b( a );
+    Fixed c;
+
+    c = b;
+
+    std::cout << a.getRawBits() << std::endl;
+    std::cout << b.getRawBits() << std::endl;
+    std::cout << c.getRawBits() << std::endl;
+	return 0;
 }

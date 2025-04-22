@@ -6,7 +6,7 @@
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 11:13:30 by andefern          #+#    #+#             */
-/*   Updated: 2025/04/06 11:34:33 by andefern         ###   ########.fr       */
+/*   Updated: 2025/04/10 14:15:22 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int	main(void)
 	harl.complain("INFO");
 	harl.complain("WARNING");
 	harl.complain("ERROR");
+	harl.complain("NOTHING");
 	return (0);
 }
 
