@@ -6,7 +6,7 @@
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 15:53:11 by andefern          #+#    #+#             */
-/*   Updated: 2025/04/22 12:12:42 by andefern         ###   ########.fr       */
+/*   Updated: 2025/04/24 13:27:11 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,11 +70,6 @@ float		Fixed::toFloat(void) const
 {
 	return (float)this->num / (1 << bit);
 }
-
-/* int		Fixed::operator+(Fixed other) const
-{
-	return (num + other.getRawBits());
-} */
 
 std::ostream	&operator<<(std::ostream &out, const Fixed &number)
 {
