@@ -6,7 +6,7 @@
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 10:31:21 by andefern          #+#    #+#             */
-/*   Updated: 2025/04/26 11:57:32 by andefern         ###   ########.fr       */
+/*   Updated: 2025/04/26 12:17:56 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,4 +77,29 @@ void ClapTrap::beRepaired(unsigned int amount)
 	hitPoints += amount;
 
 	std::cout << "ClapTrap " << pname << " repaired itself for " << amount << " points! its actual health is " << hitPoints << std::endl;
+}
+const std::string& ClapTrap::getName() const
+{
+    return pname;
+}
+
+int ClapTrap::getHitPoints() const
+{
+    return hitPoints;
+}
+
+int ClapTrap::getEnergyPoints() const
+{
+    return energyPoints;
+}
+
+void ClapTrap::setAttackDamage(int amount)
+{
+    attackDamage = amount;
+    std::cout << pname << " sets its attack damage to " << attackDamage << std::endl;
+}
+
+int ClapTrap::getAttackDamage() const
+{
+    return attackDamage;
 }
