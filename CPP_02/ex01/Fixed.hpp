@@ -6,7 +6,7 @@
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 15:53:18 by andefern          #+#    #+#             */
-/*   Updated: 2025/04/22 12:10:46 by andefern         ###   ########.fr       */
+/*   Updated: 2025/04/26 10:54:25 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ class	Fixed
 		int		toInt(void) const;
 		float 	toFloat(void) const;
 
-		//int 	operator+(Fixed other) const;
 };
 
 	std::ostream	&operator<<(std::ostream &out, const Fixed &number);
