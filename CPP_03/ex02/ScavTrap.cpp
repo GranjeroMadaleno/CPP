@@ -6,7 +6,7 @@
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 08:43:23 by andefern          #+#    #+#             */
-/*   Updated: 2025/05/06 08:52:06 by andefern         ###   ########.fr       */
+/*   Updated: 2025/05/14 09:31:42 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ ScavTrap::ScavTrap()
 	energyPoints = 50;
 	attackDamage = 20;
 
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "ScavTrap Default constructor called" << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name)
@@ -29,7 +29,7 @@ ScavTrap::ScavTrap(std::string name)
 	energyPoints = 50;
 	attackDamage = 20;
 
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "ScavTrap default constructor called" << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &clone)
@@ -50,19 +50,19 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &other)
 
 ScavTrap::~ScavTrap(void)
 {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "ScavTrap destructor called" << std::endl;
 };
 
 void ScavTrap::attack(const std::string& target)
 {
 	if (energyPoints <= 0)
 	{
-		std::cout << "ClapTrap " << pname << "has no energy points! " << std::endl;
+		std::cout << "ScavTrap " << pname << "has no energy points! " << std::endl;
 		return ;
 	}
 	energyPoints--;
 	
-	std::cout << "ClapTrap " << pname << " attacks " << target << ", causing " << attackDamage << " points of damage!" << std::endl;
+	std::cout << "ScavTrap " << pname << " attacks " << target << ", causing " << attackDamage << " points of damage!" << std::endl;
 }
 
 void ScavTrap::guardGate()
