@@ -6,7 +6,7 @@
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 09:33:17 by andefern          #+#    #+#             */
-/*   Updated: 2025/05/06 09:39:14 by andefern         ###   ########.fr       */
+/*   Updated: 2025/05/16 10:14:06 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,19 @@
 
 #include "Animal.hpp"
 #include <iostream>
+
+class Dog: public Animal
+{
+	private:
+
+	public:
+
+		Dog();
+		Dog(const Dog &clone);
+		Dog &operator=(const Dog &other);
+		~Dog();
+
+		void makeSound() const;
+};
 
 #endif
