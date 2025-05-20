@@ -6,7 +6,7 @@
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 09:33:57 by andefern          #+#    #+#             */
-/*   Updated: 2025/05/16 10:20:11 by andefern         ###   ########.fr       */
+/*   Updated: 2025/05/20 09:20:02 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,5 @@ std::string WrongAnimal::getType() const
 
 void WrongAnimal::makeSound() const
 {
-	std::cout << "WrongAnimal says: ¡MI BOOMBOOO!" << std::endl;
+	std::cout << "WrongAnimal says: ¡El Nestea y el Fuzetea saben igual!" << std::endl;
 }

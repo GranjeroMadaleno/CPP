@@ -6,7 +6,7 @@
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 09:34:25 by andefern          #+#    #+#             */
-/*   Updated: 2025/05/16 10:41:01 by andefern         ###   ########.fr       */
+/*   Updated: 2025/05/20 09:20:12 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,5 @@ WrongCat::~WrongCat()
 
 void WrongCat::makeSound() const
 {
-	std::cout << "WrongCat says: ¡El Nestea y el Fuzetea saben igual!" << std::endl;
+	std::cout << "WrongCat says: ¡MI BOOMBOOO!" << std::endl;
 }
