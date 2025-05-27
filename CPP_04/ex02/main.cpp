@@ -6,7 +6,7 @@
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 09:28:25 by andefern          #+#    #+#             */
-/*   Updated: 2025/05/20 10:15:08 by andefern         ###   ########.fr       */
+/*   Updated: 2025/05/27 12:23:02 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,36 +17,36 @@
 #include "Cat.hpp"
 #include "Brain.hpp"
 
-int main(void)
+# define ARR_SIZE 10
+
+int main()
 {
-    const AAnimal* j = new Dog();
-    const AAnimal* i = new Cat();
+	std::cout << "CONSTRUCTORS" << std::endl;
+	const AAnimal		*animals[ARR_SIZE];
 
-    std::cout << "Making sounds:" << std::endl;
-    j->makeSound();
-    i->makeSound();
+	for (size_t i = 0; i < ARR_SIZE; i++)
+	{
+		if (i % 2)
+			animals[i] = new Cat();
+		else
+			animals[i] = new Dog();
+	}
+	std::cout << std::endl;
+	
+	std::cout << "TYPES" << std::endl;
+	for (size_t i = 0; i < ARR_SIZE; i++)
+		std::cout << animals[i]->getType() << " " << std::endl;
+	std::cout << std::endl;
 
-    delete j;
-    delete i;
+	std::cout << "SOUNDS" << std::endl;
+	for (size_t i = 0; i < ARR_SIZE; i++)
+		animals[i]->makeSound();
+	std::cout << std::endl;
 
-    const int amount = 4;
-    AAnimal* animals[amount];
-    for (int k = 0; k < amount; ++k) {
-        if (k < amount / 2)
-            animals[k] = new Dog();
-        else
-            animals[k] = new Cat();
-    }
-
+	std::cout << "DESTRUCTORS" << std::endl;
+	for (size_t i = 0; i < ARR_SIZE; i++)
+			delete animals[i];
     std::cout << std::endl;
-    for (int k = 0; k < amount; ++k) {
-        animals[k]->makeSound();
-    }
-    std::cout << std::endl;
-
-    for (int k = 0; k < amount; ++k) {
-        delete animals[k];
-    }
-
-    return 0;
+    
+	return (0);
 }

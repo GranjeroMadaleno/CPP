@@ -6,7 +6,7 @@
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 09:28:13 by andefern          #+#    #+#             */
-/*   Updated: 2025/05/20 09:35:17 by andefern         ###   ########.fr       */
+/*   Updated: 2025/05/27 12:21:13 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,12 @@ Brain& Brain::operator=(const Brain &other)
 Brain::~Brain()
 {
 	std::cout << "Brain default destructor called " << std::endl;
+}
+std::string		Brain::get_idea(int n)
+{
+	if (n < 0)
+		return (NULL);
+	if (n > 100)
+		return (NULL);
+	return (ideas[n]);
 }

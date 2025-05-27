@@ -6,7 +6,7 @@
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 09:28:09 by andefern          #+#    #+#             */
-/*   Updated: 2025/05/20 09:29:53 by andefern         ###   ########.fr       */
+/*   Updated: 2025/05/27 11:58:04 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ class Brain
 		Brain &operator=(const Brain &other);
 		~Brain();
 
+		std::string	get_idea(int n);
 };
 
 #endif

@@ -1,36 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   Bureucrat.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/20 09:28:09 by andefern          #+#    #+#             */
-/*   Updated: 2025/05/27 12:20:49 by andefern         ###   ########.fr       */
+/*   Created: 2025/05/22 13:37:06 by andefern          #+#    #+#             */
+/*   Updated: 2025/05/22 13:37:07 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-# define BRAIN_HPP
-
-#include "AAnimal.hpp"
-#include <iostream>
-
-class Brain
-{
-	private:
-
-		std::string	ideas[100];
-
-	public:
-
-		Brain();
-		Brain(const Brain &clone);
-		Brain &operator=(const Brain &other);
-		~Brain();
-
-		std::string	get_idea(int n);
-
-};
-
-#endif

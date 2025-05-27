@@ -6,7 +6,7 @@
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 09:28:25 by andefern          #+#    #+#             */
-/*   Updated: 2025/05/16 10:42:23 by andefern         ###   ########.fr       */
+/*   Updated: 2025/05/27 11:49:26 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include "Cat.hpp"
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
+
 
 int main(void)
 {
@@ -41,6 +42,26 @@ int main(void)
 	delete meta;
 	delete cat;
 	delete dog;
+	delete wcat;
+	delete wanimal;
 	
 	return (0);
 }
+
+/* Animal		meta;
+Cat			cat;
+Dog			dog;
+WrongCat	wcat;
+WrongAnimal wanimal;
+
+std::cout << meta.getType() << " " << std::endl;
+std::cout << cat.getType() << " " << std::endl;
+std::cout << dog.getType() << " " << std::endl;
+std::cout << wcat.getType() << " " << std::endl;
+std::cout << wanimal.getType() << " " << std::endl;
+
+meta.makeSound();
+cat.makeSound();
+dog.makeSound();
+wcat.makeSound();
+wanimal.makeSound(); */
