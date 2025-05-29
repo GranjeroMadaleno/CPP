@@ -6,7 +6,7 @@
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 09:33:02 by andefern          #+#    #+#             */
-/*   Updated: 2025/05/20 10:14:36 by andefern         ###   ########.fr       */
+/*   Updated: 2025/05/29 11:05:55 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ class Cat: public AAnimal
 {
 	private:
 
+	Brain	*brain;
+	
 	public:
 
 		Cat();
