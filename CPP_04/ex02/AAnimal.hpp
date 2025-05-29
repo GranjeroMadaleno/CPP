@@ -6,7 +6,7 @@
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 09:33:31 by andefern          #+#    #+#             */
-/*   Updated: 2025/05/20 10:13:50 by andefern         ###   ########.fr       */
+/*   Updated: 2025/05/29 11:39:07 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class AAnimal
 		AAnimal &operator=(const AAnimal &other);
 		virtual ~AAnimal();
 
-		virtual void makeSound() const;
+		virtual void makeSound() const = 0;
 		std::string getType() const;
 };
 

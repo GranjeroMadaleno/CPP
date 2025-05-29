@@ -6,7 +6,7 @@
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 09:33:23 by andefern          #+#    #+#             */
-/*   Updated: 2025/05/20 10:13:42 by andefern         ###   ########.fr       */
+/*   Updated: 2025/05/29 11:39:18 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,4 @@ AAnimal::~AAnimal()
 std::string AAnimal::getType() const
 {
 	return (type);
-}
-
-void AAnimal::makeSound() const
-{
-	std::cout << "AAnimal says: ¡Linganguliguliguliguacha Lingangu Lingangu!" << std::endl;
 }
