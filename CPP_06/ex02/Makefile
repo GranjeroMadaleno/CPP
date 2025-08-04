@@ -6,14 +6,14 @@
 #    By: andefern <andefern@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/04 11:51:37 by andefern          #+#    #+#              #
-#    Updated: 2025/08/04 12:09:23 by andefern         ###   ########.fr        #
+#    Updated: 2025/08/04 12:28:26 by andefern         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = convert
+NAME = Serialization
 
 SRCS =		main.cpp \
-			ScalarConverter.cpp \
+			Base.cpp \
 			
 			
 OBJ = $(SRCS:%.cpp=%.o)

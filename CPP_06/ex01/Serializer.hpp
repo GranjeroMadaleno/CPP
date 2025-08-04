@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Serializer.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/04 11:51:30 by andefern          #+#    #+#             */
-/*   Updated: 2025/08/04 12:31:25 by andefern         ###   ########.fr       */
+/*   Created: 2025/08/04 12:17:57 by andefern          #+#    #+#             */
+/*   Updated: 2025/08/04 12:19:07 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "ScalarConverter.hpp"
+#ifndef SERIALIZER_HPP
+#define SERIALIZER_HPP
 
-int	main(int argc, char **argv){
-	if (argc != 2)
-		std::cout << "Invalid argument" << std::endl;
-	ScalarConverter::convert(argv[1]);
-	return 0;
-}
+#include "stdint.h"
+#include "Data.hpp"
 
-/* ./convert 0
-char: Non displayable
-int: 0
-float: 0.0f
-double: 0.0
-./convert nan
-char: impossible
-int: impossible
-float: nanf
-double: nan
-./convert 42.0f
-char: '*'
-int: 42
-float: 42.0f
-double: 42.0 */
+class Serializer
+{
+private:
+	Serializer();
+	Serializer(const Serializer &copy);
+	Serializer &operator= (const Serializer &other);
+	~Serializer();
+
+public:
+	static uintptr_t serialize(Data* ptr);
+	static Data* deserialize(uintptr_t raw);
+};
+
+
+#endif
