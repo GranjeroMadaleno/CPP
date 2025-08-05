@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   easyfind.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/05 11:07:42 by andefern          #+#    #+#             */
-/*   Updated: 2025/08/05 11:07:45 by andefern         ###   ########.fr       */
+/*   Created: 2025/08/05 12:25:11 by andefern          #+#    #+#             */
+/*   Updated: 2025/08/05 12:34:01 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "iter.hpp"
+#ifndef EASYFIND_HPP
+# define EASYFIND_HPP
 
-int	main(void) {
-	int intArray[] = {1, 2, 3, 99, 48};
-	char charArray[] = {'a', 'B', '8', 'd', 'e', '-', 21};
-	
-	iter(charArray, 7, printvalue);
-	iter(intArray, 5, printvalue);
-}
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include "easyfind.tpp"
+
+template <typename T>
+bool	easyfind(T& cont, int n);
+
+#endif

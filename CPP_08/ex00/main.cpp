@@ -5,17 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/05 11:07:42 by andefern          #+#    #+#             */
-/*   Updated: 2025/08/05 11:07:45 by andefern         ###   ########.fr       */
+/*   Created: 2025/08/05 12:24:43 by andefern          #+#    #+#             */
+/*   Updated: 2025/08/05 12:50:42 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "iter.hpp"
+#include "easyfind.hpp"
 
-int	main(void) {
-	int intArray[] = {1, 2, 3, 99, 48};
-	char charArray[] = {'a', 'B', '8', 'd', 'e', '-', 21};
-	
-	iter(charArray, 7, printvalue);
-	iter(intArray, 5, printvalue);
+int main(void) {
+	std::vector<int> vec;
+
+	vec.push_back(7);
+	vec.push_back(11);
+	vec.push_back(25);
+	vec.push_back(33);
+	if(easyfind(vec, 25))
+		std::cout << "Number Found" << std::endl;
+	else
+		std::cout << "Number Not Found" << std::endl;
 }

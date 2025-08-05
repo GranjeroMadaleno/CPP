@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   iter.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/05 11:07:42 by andefern          #+#    #+#             */
-/*   Updated: 2025/08/05 11:07:45 by andefern         ###   ########.fr       */
+/*   Created: 2025/08/05 11:08:04 by andefern          #+#    #+#             */
+/*   Updated: 2025/08/05 11:08:06 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "iter.hpp"
+#include <iostream>
+#include <typeinfo>
 
-int	main(void) {
-	int intArray[] = {1, 2, 3, 99, 48};
-	char charArray[] = {'a', 'B', '8', 'd', 'e', '-', 21};
-	
-	iter(charArray, 7, printvalue);
-	iter(intArray, 5, printvalue);
+template <typename T>
+void	iter(T array[], size_t length, void (*function)(T const &)) {
+	for (size_t i = 0; i < length; i++)
+		function(array[i]);
+}
+
+template <typename T>
+void	printvalue(T val) {
+	std::cout << val << std::endl;
 }
