@@ -6,7 +6,7 @@
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 13:37:15 by andefern          #+#    #+#             */
-/*   Updated: 2025/08/04 11:15:56 by andefern         ###   ########.fr       */
+/*   Updated: 2025/08/06 12:35:11 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class Bureaucrat
 {
 private:
-	const std::string	name;
+	const 				std::string	name;
 	unsigned int		grade;
 
 public:

@@ -6,7 +6,7 @@
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 11:06:58 by andefern          #+#    #+#             */
-/*   Updated: 2025/08/04 11:07:35 by andefern         ###   ########.fr       */
+/*   Updated: 2025/08/06 12:34:48 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ class Bureaucrat;
 class AForm
 {
 private:
-	const std::string	name;
-	bool				isSigned;
+	const 						std::string	name;
+	bool						isSigned;
 	const unsigned int			signGrade;
 	const unsigned int			executeGrade;
 

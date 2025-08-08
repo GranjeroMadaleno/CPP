@@ -6,20 +6,20 @@
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/14 10:30:49 by andefern          #+#    #+#             */
-/*   Updated: 2025/07/14 12:46:17 by andefern         ###   ########.fr       */
+/*   Updated: 2025/08/06 12:29:30 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
 
-Form::Form(): pname("Form"), signGrade(150), executeGrade(1)
+Form::Form(): name("Form"), signGrade(150), executeGrade(1)
 {
 	isSigned = false;
 }
 
 Form::Form(std::string name, int sign_grade, int execute_grade)
-	: pname(name), signGrade(sign_grade), executeGrade(execute_grade)
+	: name(name), signGrade(sign_grade), executeGrade(execute_grade)
 {
 	if (sign_grade < 1)
 		throw Form::GradeTooLowException();
@@ -33,7 +33,7 @@ Form::Form(std::string name, int sign_grade, int execute_grade)
 }
 
 Form::Form(const Form &copy)
-	: pname(copy.pname), isSigned(false),
+	: name(copy.name), isSigned(false),
 	signGrade(copy.signGrade),
 	executeGrade(copy.executeGrade) {}
 
@@ -45,7 +45,7 @@ Form& Form::operator=(const Form &other) {
 Form::~Form() {}
 
 std::string	Form::getName(void) const {
-	return pname;
+	return name;
 }
 bool	Form::getSigned(void) const {
 	return isSigned;

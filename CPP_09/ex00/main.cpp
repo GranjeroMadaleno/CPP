@@ -5,37 +5,39 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/22 13:35:39 by andefern          #+#    #+#             */
-/*   Updated: 2025/08/06 12:14:36 by andefern         ###   ########.fr       */
+/*   Created: 2025/08/08 12:43:22 by andefern          #+#    #+#             */
+/*   Updated: 2025/08/08 12:43:28 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iomanip>
-#include "Bureaucrat.hpp"
+#include "BitcoinExchange.hpp"
 
-#define HRED	"\033[91m"
-#define HBLU	"\033[94m"
-#define HGRE	"\033[92m"
-#define HMAG	"\033[95m"
-#define RST		"\033[0m"
+static int	parse(int argc, std::ifstream &fin) {
+	std::string		line;
 
-int main()
+	if (argc != 2)
+		return (std::cerr << "Enter one file as the argument!" << std::endl, 0);
+	if (!fin)
+		return(std::cerr << "Error, could not open file." << std::endl, 0);
+	if (std::getline(fin, line, '\n') && line != "date | value")
+		return(std::cerr << "Error, infile has the wrong format" << std::endl, 0);
+	return 1;
+}
+
+int main(int argc, char **argv)
 {
-	Bureaucrat julian("julian", 99);
-	std::cout << HGRE << julian << RST << std::endl;
-	Bureaucrat ernesto("ernesto", 20);
-	Bureaucrat yisus;
+	std::ifstream	fin(argv[1]);
 
+	if (!parse(argc, fin))
+		return 0;
 	try
 	{
-		ernesto = Bureaucrat("ernesto", 500);
-		Bureaucrat federico("ernesto", 0);
+		BitcoinExchange db("data.csv");
+		db.printValue(fin);
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << HRED << e.what() << RST << std::endl;
+		std::cerr << e.what() << '\n';
 	}
-	std::cout << HBLU << ernesto << RST << std::endl;
-	std::cout << HMAG << yisus << RST << std::endl;
-	return (0);
-};
+	
+}

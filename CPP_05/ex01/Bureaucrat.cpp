@@ -6,25 +6,25 @@
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/09 11:35:33 by andefern          #+#    #+#             */
-/*   Updated: 2025/07/14 12:49:22 by andefern         ###   ########.fr       */
+/*   Updated: 2025/08/06 12:29:19 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat() : pname("Default pname"), pgrade(150)
+Bureaucrat::Bureaucrat() : name("Default name"), grade(150)
 {
 	//std::cout << "Bureaucrat constructor called" << std::endl;
 };
 
-Bureaucrat::Bureaucrat(std::string name, unsigned int grade): pname(name), pgrade(grade)
+Bureaucrat::Bureaucrat(std::string name, unsigned int grade): name(name), grade(grade)
 {
 	if (grade < 1)
 		throw GradeTooHighException();
 	if (grade > 150)
 		throw GradeTooLowException();
 
-	//std::cout << "Constructor bureaucrat: " << this->pname << " with grade: " << this->pgrade << std::endl;
+	//std::cout << "Constructor bureaucrat: " << this->name << " with grade: " << this->grade << std::endl;
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat &clone)
@@ -35,7 +35,7 @@ Bureaucrat::Bureaucrat(const Bureaucrat &clone)
 
 Bureaucrat& Bureaucrat::operator=(const Bureaucrat &other)
 {
-	this->pgrade = other.pgrade;
+	this->grade = other.grade;
 	return (*this);
 	//std::cout << "Bureaucrat operation constructor called" << std::endl;
 }
@@ -46,24 +46,24 @@ Bureaucrat::~Bureaucrat(){
 
 std::string Bureaucrat::getName() const
 {
-	return (this->pname);
+	return (this->name);
 }
 
 unsigned int Bureaucrat::getGrade() const
 {
-	return (this->pgrade);
+	return (this->grade);
 }
 void	Bureaucrat::gradeIncrement()
 {
 	if ((this->getGrade() - 1) < 1)
 		throw GradeTooHighException();
-	this->pgrade--;
+	this->grade--;
 }
 void	Bureaucrat::gradeDecrement()
 {
 	if ((this->getGrade() + 1) > 150)
 		throw GradeTooLowException();
-	this->pgrade++;
+	this->grade++;
 }
 
 std::ostream	&operator<<(std::ostream &_ostream, const Bureaucrat &bureaucrat) {
