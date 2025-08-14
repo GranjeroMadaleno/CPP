@@ -6,7 +6,7 @@
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 13:03:50 by andefern          #+#    #+#             */
-/*   Updated: 2025/08/08 13:06:26 by andefern         ###   ########.fr       */
+/*   Updated: 2025/08/08 13:37:08 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include <ctime>
 #include <climits>
 
-# define MERTXE 
+# define CRAZY_NUMBERS 
 
 class PmergeMe
 {
@@ -28,7 +28,7 @@ private:
 	std::list<std::list<int> > elements;
 	std::vector<std::vector<int> > vec_elements;
 	int	level;
-	static const unsigned int mertxe[];
+	static const unsigned int crazy_numbers[];
 
 public:
 	PmergeMe();

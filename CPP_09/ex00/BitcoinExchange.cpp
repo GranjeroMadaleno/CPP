@@ -6,7 +6,7 @@
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 12:44:17 by andefern          #+#    #+#             */
-/*   Updated: 2025/08/08 12:44:19 by andefern         ###   ########.fr       */
+/*   Updated: 2025/08/08 13:30:28 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ BitcoinExchange::BitcoinExchange(std::string file)
 	std::ifstream infile(file.c_str());
 
 	if (!infile)
-		throw std::runtime_error("Error: could not open file.");
+		throw std::runtime_error("Error: Could not open file.");
 
 	std::string date;
 	std::string num;
@@ -71,7 +71,7 @@ static int splitLine(const std::string &line, std::string &date, std::string &va
 		val = line.substr(pos + 3);
 	}
 	else
-		return (std::cerr << "Error: bad input => " << line << std::endl, 0);
+		return (std::cerr << "Error: Bad input => " << line << std::endl, 0);
 	return 1;
 }
 

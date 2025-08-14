@@ -6,11 +6,11 @@
 #    By: andefern <andefern@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/04 11:51:37 by andefern          #+#    #+#              #
-#    Updated: 2025/08/04 12:28:26 by andefern         ###   ########.fr        #
+#    Updated: 2025/08/13 12:17:55 by andefern         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Serialization
+NAME = Identify
 
 SRCS =		main.cpp \
 			Base.cpp \

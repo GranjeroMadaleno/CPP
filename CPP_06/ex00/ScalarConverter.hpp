@@ -6,7 +6,7 @@
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 11:56:46 by andefern          #+#    #+#             */
-/*   Updated: 2025/08/04 12:03:31 by andefern         ###   ########.fr       */
+/*   Updated: 2025/08/13 12:12:58 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,13 @@
 
 class ScalarConverter
 {
-public:
-	ScalarConverter();
-	ScalarConverter(const ScalarConverter &copy);
-	ScalarConverter &operator= (const ScalarConverter &other);
-	~ScalarConverter();
+	public:
+		ScalarConverter();
+		ScalarConverter(const ScalarConverter &copy);
+		ScalarConverter &operator= (const ScalarConverter &other);
+		~ScalarConverter();
 
-	static void	convert(std::string literal);
+		static void	convert(std::string literal);
 };
 
 enum

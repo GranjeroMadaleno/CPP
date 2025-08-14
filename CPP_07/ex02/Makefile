@@ -6,7 +6,7 @@
 #    By: andefern <andefern@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/04 11:51:37 by andefern          #+#    #+#              #
-#    Updated: 2025/08/05 11:12:40 by andefern         ###   ########.fr        #
+#    Updated: 2025/08/14 12:52:25 by andefern         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,3 +40,4 @@ re: fclean $(NAME)
 
 .PHONY: all clean fclean re
 
+	

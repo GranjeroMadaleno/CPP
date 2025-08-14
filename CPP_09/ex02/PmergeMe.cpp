@@ -6,7 +6,7 @@
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 13:03:32 by andefern          #+#    #+#             */
-/*   Updated: 2025/08/08 13:17:25 by andefern         ###   ########.fr       */
+/*   Updated: 2025/08/08 13:37:36 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ PmergeMe &PmergeMe::operator=(const PmergeMe &other)
 }
 PmergeMe::~PmergeMe() {}
 
-const unsigned int PmergeMe::mertxe[] = {3, 5, 11, 21, 43, 85, 171, 341,
+const unsigned int PmergeMe::crazy_numbers[] = {3, 5, 11, 21, 43, 85, 171, 341,
 										 683, 1365, 2731, 5461, 10923, 21845, 43691, 87381, 174763, 349525};
 
 bool isNum(const std::string &s)
@@ -156,10 +156,10 @@ void PmergeMe::insert()
 		if (toMove->size() == pairSize && i%2)
 			pend.splice(pend.end(), elements, toMove); // Move list from elements to pend
 	}
-	size_t mertxe_len = sizeof(mertxe) / sizeof(unsigned int);
-	for (size_t i = 1; i < mertxe_len && !pend.empty(); ++i)
+	size_t crazy_numbers_len = sizeof(crazy_numbers) / sizeof(unsigned int);
+	for (size_t i = 1; i < crazy_numbers_len && !pend.empty(); ++i)
 	{
-		unsigned int count = mertxe[i] - mertxe[i - 1];
+		unsigned int count = crazy_numbers[i] - crazy_numbers[i - 1];
 
 		if (count >= pend.size())
 			count = pend.size(); // Clamp(limite) to size
@@ -199,10 +199,10 @@ void PmergeMe::vec_insert()
 		else
 			++i;
 	}
-	size_t mertxe_len = sizeof(mertxe) / sizeof(unsigned int);
-	for (size_t i = 1; i < mertxe_len && !pend.empty(); ++i)
+	size_t crazy_numbers_len = sizeof(crazy_numbers) / sizeof(unsigned int);
+	for (size_t i = 1; i < crazy_numbers_len && !pend.empty(); ++i)
 	{
-		unsigned int count = mertxe[i] - mertxe[i - 1];
+		unsigned int count = crazy_numbers[i] - crazy_numbers[i - 1];
 
 		if (count >= pend.size())
 			count = pend.size(); // Clamp(limite) to size

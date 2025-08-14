@@ -6,7 +6,7 @@
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 12:28:56 by andefern          #+#    #+#             */
-/*   Updated: 2025/08/04 12:31:44 by andefern         ###   ########.fr       */
+/*   Updated: 2025/08/13 12:14:09 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 
 class Base
 {
-public:
-	virtual ~Base();
+	public:
+		virtual ~Base();
 };
 
 class A: public Base {};

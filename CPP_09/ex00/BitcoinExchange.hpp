@@ -6,7 +6,7 @@
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 12:44:38 by andefern          #+#    #+#             */
-/*   Updated: 2025/08/08 12:44:40 by andefern         ###   ########.fr       */
+/*   Updated: 2025/08/08 13:30:43 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 # define BITCOINEXCHANGE_HPP
 
 #include <iostream>
-#include <sstream>
 #include <cstdlib>
-#include <iomanip>
+#include <sstream>
 #include <map>
 #include <fstream>
-#include <ctime>
+#include <iomanip>
 #include <limits>
+#include <ctime>
 
 class BitcoinExchange
 {
