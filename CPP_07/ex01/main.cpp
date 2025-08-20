@@ -6,7 +6,7 @@
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 11:07:42 by andefern          #+#    #+#             */
-/*   Updated: 2025/08/14 12:39:00 by andefern         ###   ########.fr       */
+/*   Updated: 2025/08/20 12:28:50 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,4 +18,5 @@ int	main(void) {
 	
 	iter(intArray, 5, print_value);
 	iter(charArray, 7, print_value);
+  return (0);
 }

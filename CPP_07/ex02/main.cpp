@@ -6,7 +6,7 @@
 /*   By: andefern <andefern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 12:50:52 by andefern          #+#    #+#             */
-/*   Updated: 2025/08/14 13:08:19 by andefern         ###   ########.fr       */
+/*   Updated: 2025/08/20 12:43:28 by andefern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ int	main(void) {
 	catch	(std::out_of_range	&e) {
 		std ::cout << e.what() << std::endl;
 	}
-
+	return (0);
 }
 
